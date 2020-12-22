@@ -1990,8 +1990,7 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4bae77;
-			box-shadow: 0 0 0 1px #4bae77;
+			/**/
 		}
 
 	.select-wrapper {
@@ -3145,4 +3144,9 @@
 				padding: 3em 0;
 			}
 
+		}
+
+		#icon1{
+			width: 10%;
+			height:10%;
 		}

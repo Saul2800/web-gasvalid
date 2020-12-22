@@ -3,8 +3,9 @@
 	<head>
 		<title>GasValid inicio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="css/inicio.css" />
+		<link rel ="icon" type="icon/png" href="recursos/gasicon.png">      <!--Icono a pestaña-->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />	<!--Para cels -->
+		<link rel="stylesheet" href="css/inicio.css" />							<!--css inicio -->	
 	</head>
 	<body>
 
@@ -13,6 +14,7 @@
 				<div class="inner">
 					<nav id="nav">
 						<a href="login.php">Login</a>
+						<img src="recursos/gasicon.png" width="35">							<!--Dirige al login-->
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -22,23 +24,23 @@
 			<section id="banner">
 				<div class="inner">
 					<header>
-						<h1>Bienvenido a GasValid</h1>
+						<h1>Bienvenido a GasValid</h1>							<!--TITULO -->
 					</header>
 
 					<div class="flex ">
 
 						<div>
-							<h3>TITULO1</h3>
-							<p>parrafo1</p>
+							<h3>TITULO1</h3>								<!--info-->
+							<p>parrafo1</p>									<!--info-->
 						</div>
 
 						<div>
-							<h3>TITULO2</h3>
-							<p>parrafo2</p>
+							<h3>TITULO2</h3>								<!--info-->
+							<p>parrafo2</p>									<!--info-->
 						</div>
 						<div>
-							<h3>TITULO3</h3>
-							<p>parrafo3</p>
+							<h3>TITULO3</h3>								<!--info-->
+							<p>parrafo3</p>									<!--info-->
 						</div>
 					</div>
 				</div>
@@ -51,21 +53,21 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="recursos/imagen1.jpg" alt="Pic 01" />
+								<img src="recursos/imagen1.jpg" alt="Pic 01" />		<!--imagen-->
 							</div>
 							<header>
-								<h3>TITULO4</h3>
+								<h3>TITULO4</h3>									<!--info-->
 							</header>
-							<p>parrafo4</p>
+							<p>parrafo4</p>											<!--info-->
 						</article>
 						<article>
-							<div class="image round">
+							<div class="image round">		
 								<img src="recursos/imagen2.jpg" alt="Pic 02" />
 							</div>
-							<header>
-								<h3>TITULO5</h3>
+							<header>	
+								<h3>TITULO5</h3>									<!--info-->
 							</header>
-							<p>parrafo5</p>
+							<p>parrafo5</p>											<!--info-->
 						</article>
 					</div>
 				</div>
@@ -75,29 +77,24 @@
 			<footer id="footer">
 				<div class="inner">
 
-					<h3>En contacto</h3>
+					<h3>En contacto</h3>											<!--contacto-->
 
 					<form action="#" method="post">
-
-						<div class="field half first">
-							<label for="name">Nombre</label>
-							<input name="name" id="name" type="text" placeholder="Name">
-						</div>
 						<div class="field half">
-							<label for="email">Email</label>
-							<input name="email" id="email" type="email" placeholder="Email">
-						</div>
+							<h4 id="email">Email</h4>
+							<input name="email" id="email" type="email" placeholder="Email"><!--INPUT-->
+						</div>	
 						<div class="field">
-							<label for="message">Mensaje</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+							<h4 id="message">Mensaje</h4>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea> <!--texarea-->
 						</div>
 						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
+							<li><input value="Send Message" class="button alt" type="submit"></li>	<!--SUMBIT-->
 						</ul>
 					</form>
 
 					<div class="copyright">
-						<a href="https://www.kaabcode.com/">Kaab_Code</a>
+						<a href="https://www.kaabcode.com/">Kaab_Code</a>				<!--fuentes o pie de pag-->
 					</div>
 
 				</div>
