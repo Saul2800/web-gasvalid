@@ -20,7 +20,8 @@
     <form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="usuario"> <!--input usuario-->
       <input type="password" id="password" class="fadeIn third" name="login" placeholder="password"> <!--input password-->
-      <input type="submit" class="fadeIn fourth" value="Entrar">                              <!--Enviar info para entrar-->
+      <!--<input type="submit" class="fadeIn fourth" value="Entrar">                              Enviar info para entrar-->
+      <a class="underlineHover" href="repositorio.php"> <br> !probando! <br> </a>                                      <!-- usaremos esto para entrar por el momento-->
     </form>
 
     <!-- Remind Passowrd -->
