@@ -3,7 +3,7 @@
 	<head>
 		<title>GasValid inicio</title>
 		<meta charset="utf-8" />
-		<link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.png" >      <!--Icono a pestaña-->
+		<link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg" >      <!--Icono a pestaña-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />	<!--Para cels -->
 		<link rel="stylesheet" href="css/inicio.css" />							<!--css inicio -->	
 	</head>
@@ -14,7 +14,7 @@
 				<div class="inner">
 					<nav id="nav">
 						<a href="login.php">Login</a>
-						<img src="recursos/gasvalid_logo.png" width="100">							<!--Dirige al login-->
+						<img src="recursos/gasvalid_logo.jpeg" width="100">							<!--Dirige al login-->
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">  
         <title>Login GasValid</title>                                       <!--Titulo a pestañaa-->
-        <link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.png">           <!--Icono a pestaña-->
+        <link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg">           <!--Icono a pestaña-->
         <link rel="stylesheet" type="text/css" href="css/login.css">        <!--estilo del login css-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="libraries/bootstrap4/bootstrap.min.css"> <!--libreria Para el cel-->
@@ -13,7 +13,7 @@
   <div id="formContent">
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="recursos/gasvalid_logo.png"id="icon" alt="User Icon" />                <!--Imagen de presentacion-->
+      <img src="recursos/gasvalid_logo.jpeg"id="icon" alt="Icono gv" />                <!--Imagen de presentacion-->
       <h1>Inicio de Sesion</h1>                                                 <!--Titulo-->
     </div>
     <!-- Creamos el Formulario de login-->
