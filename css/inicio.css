@@ -7,8 +7,8 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        
+       article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
 
@@ -1963,7 +1963,7 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #6cc091;
+		background: #d57149;
 		border-radius: 10px;
 		border: none;
 		border: solid 2px #8dcca9;
@@ -2000,7 +2000,7 @@
 	}
 
 		.select-wrapper:before {
-			content: "ÔÅ∏";
+			content: "Ô?∏";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
 			font-family: FontAwesome;
@@ -2739,6 +2739,7 @@
 			color: inherit;
 			text-decoration: none;
 			font-size: 1em;
+                        overflow: auto;
 		}
 
 			#header a:hover {
@@ -2905,7 +2906,7 @@
 
 	#banner {
 		padding: 8em 0 9em 0;
-		background-image: url(../../images/banner.jpg);
+		background-image: url(../recursos/fondoGasValid.jpg);
 		background-size: cover;
 		background-position: bottom;
 		background-attachment: fixed;
@@ -2933,7 +2934,7 @@
 
 		#banner h1 {
 			font-size: 3.5em;
-			font-weight: 400;
+			font-weight: 800;
 			color: #fff;
 			line-height: 1em;
 			margin: 0 0 1em 0;
@@ -3099,7 +3100,7 @@
 
 	#footer {
 		padding: 6em 0;
-		background: #6cc091;
+		background: #d57149;
 		color: #fff;
 		text-align: center;
 	}
