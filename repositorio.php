@@ -478,10 +478,5 @@ $(function(){
 </br></br>
 <a href="logout.php" class="btn btn-danger pull-right">Cierra la sesión</a>
 
-<form action="?" method="post" id="mkdir" />
-        <label for=dirname>Crear Nueva Carpeta</label><input id=dirname type=text name=name value="" />
-        <input type="submit" value="crear" />
-    </form>
-
 </body>
 </html>
