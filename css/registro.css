@@ -1,7 +1,7 @@
 /* BASIC */
 
 html{
-  background-color: rgb(225,200,100);
+  background-color: #aa4a30;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #92badd;
+  color: #9f5f80;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
@@ -81,7 +81,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #d57149;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -240,28 +240,28 @@ input[type=text]:placeholder {
 }
 
 .fadeIn.noestacion {
-  background-color: rgb(150,150,200);
+  background-color: #edcfa9;
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 .fadeIn.password {
-  background-color: rgb(170,10,200);
+  background-color: #edcfa9;
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
 .fadeIn.email {
-  background-color: rgb(0,200,130);
+  background-color: #edcfa9;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 .fadeIn.referencia {
-  background-color: rgb(0,100,130);
+  background-color: #edcfa9;
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
@@ -289,7 +289,7 @@ input[type=text]:placeholder {
 }
 
 h1{
-    color:#60a0ff;
+    color:#9f5f80;
 }
 
 /* OTHERS */
@@ -299,5 +299,5 @@ h1{
 } 
 
 #icon {
-  width:30%;
+  width:40%;
 }
