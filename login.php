@@ -11,17 +11,17 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 require_once "databaseconfig.php";
 
 // Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
+$noEstacion = $password = "";
+$noEstacion_err = $password_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Por favor ingrese su usuario.";
+    // Check if noEstacion is empty
+    if(empty(trim($_POST["noEstacion"]))){
+        $noEstacion_err = "Por favor ingrese su Numero de estacion.";
     } else{
-        $username = trim($_POST["username"]);
+        $noEstacion = trim($_POST["noEstacion"]);
     }
 
     // Check if password is empty
@@ -32,26 +32,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate credentials
-    if(empty($username_err) && empty($password_err)){
+    if(empty($noEstacion_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT noEstacion, tipo, password FROM tblUsuarios WHERE noEstacion = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            mysqli_stmt_bind_param($stmt, "s", $param_noEstacion);
 
             // Set parameters
-            $param_username = $username;
+            $param_noEstacion = $noEstacion;
 
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Store result
                 mysqli_stmt_store_result($stmt);
 
-                // Check if username exists, if yes then verify password
+                // Check if noEstacion exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $tipo, $noEstacion, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -59,8 +59,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
+                            $_SESSION["tipo"] = $tipo;
+                            $_SESSION["noEstacion"] = $noEstacion;
 
                             // Redirect user to welcome page
                             header("location: repositorio.php");
@@ -70,8 +70,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }
                     }
                 } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = "No existe cuenta registrada con ese nombre de usuario.";
+                    // Display an error message if noEstacion doesn't exist
+                    $noEstacion_err = "No existe cuenta registrada con ese nombre de usuario.";
                 }
             } else{
                 echo "Algo salió mal, por favor vuelve a intentarlo.";
@@ -103,26 +103,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="recursos/gasvalid_logo.jpeg"id="icon" alt="Icono gv" />                <!--Imagen de presentacion-->
-      <h1>Inicio de Sesion</h1>                                                 <!--Titulo-->
+      <h1>Inicio de Sesión</h1>                                                 <!--Titulo-->
     </div>
     <!-- Creamos el Formulario de login-->
     
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <input placeholder="Usuario"type="text" name="username" class="fadeIn second" value="<?php echo $username; ?>">  
-                <span class="help-block"><?php echo $username_err; ?></span>
+            <div class="form-group <?php echo (!empty($noEstacion_err)) ? 'has-error' : ''; ?>">
+                <input placeholder="No. Estacion"type="text" name="noEstacion" class="fadeIn second" value="<?php echo $noEstacion; ?>">  
+                <span class="help-block"><?php echo $noEstacion_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <input placeholder="Passowrd" type="password" name="password" class="fadeIn third">
+                <input placeholder="Password" type="password" name="password" class="fadeIn third">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="fadeIn fourth" value="Iniciar">
+                <input type="submit" class="fadeIn fourth" value="Entrar">
             </div>
         </form>
 <!--Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="inicio.php">HOME</a>        <!--Hacemos un vinculo para hacer el registro-->
+      <a class="underlineHover" href="inicio.php">INICIO</a>        <!--Hacemos un vinculo para hacer el registro-->
     </div>
   </div>
 </div>                     
