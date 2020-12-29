@@ -477,6 +477,7 @@ $(function(){
 
 </br></br>
 <a href="logout.php" class="btn btn-danger pull-right">Cierra la sesión</a>
+<a href="registro.php" class="btn btn-danger pull-right">Registrar usuarios</a>
 
 </body>
 </html>

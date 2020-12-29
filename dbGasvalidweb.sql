@@ -23,9 +23,7 @@ CREATE TABLE `tblUsuarios` (
 --
 
 INSERT INTO `tblUsuarios` (`noEstacion`, `tipo`, `email`, `password`, `referencia`) VALUES
-(12,  0, 'mauricios@', '$2y$10$ieDvkHdqyzm4BQ.JVEh3QOMNh7YreMYecqrQOPWn.bUPVNAB4ZL2C', 'azul'),
-(123, 1, 'admin@', '$2y$10$5K.dCB5R6Li7RXn96c4YCeT7zx0Vqgkulsd7VskX9//KduOWprgJ2', 'rojo'),
-(124, 0, 'configuroweb@', '$2y$10$OayB2Pv03Gqret5/FSFe2eN1.q1xfPHrQjzCcUXEYS1a2LTxQGAiq', 'verde');
+(123, 1, '123@gas.com', 'gasvalid123', 'prueba');
 
 --
 -- Indices de la tabla `tblUsuarios`

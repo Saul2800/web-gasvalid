@@ -267,6 +267,13 @@ input[type=text]:placeholder {
   animation-delay: 1s;
 }
 
+#tipo {
+  color:#cf7057;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
 
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {
