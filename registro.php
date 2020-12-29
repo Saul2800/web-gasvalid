@@ -1,3 +1,4 @@
+
 <?php
 // Include config file
 require_once "databaseconfig.php";
@@ -34,19 +35,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $noEstacion = trim($_POST["noEstacion"]);
                 }
             } else{
-                echo "Al parecer algo saliÃ³ mal.";
+                echo "Al parecer algo salió mal.";
             }
+             mysqli_stmt_close($stmt);
+              // Close statement
         }
          
-        // Close statement
-        mysqli_stmt_close($stmt);
+       
+       
     }
     
     // Validate password
     if(empty(trim($_POST["password"]))){
-        $password_err = "Por favor ingresa una contraseÃ±a.";     
+        $password_err = "Por favor ingresa una contraseña.";     
     } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "La contraseÃ±a al menos debe tener 6 caracteres.";
+        $password_err = "La contraseña al menos debe tener 6 caracteres.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -94,14 +97,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                header("location: registro.php");
+               echo '<script language="javascript">
+                    alert("Usuario Registrado Correctamente");
+                    window.location.href="registro.php";
+                    </script>';
+ 
             } else{
-                echo "Algo saliÃ³ mal, por favor intÃ©ntalo de nuevo.";
+                echo "Algo salió mal, por favor inténtalo de nuevo.";
             }
+            // Close statement
+        mysqli_stmt_close($stmt);
         }
          
-        // Close statement
-        mysqli_stmt_close($stmt);
+        
     }
     
     // Close connection
@@ -113,8 +121,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html>
     <head>
         <meta charset="UTF-8">  
-        <title>Registro GasValid</title>                                       <!--Titulo a pestaÃ±aa-->
-        <link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg">           <!--Icono a pestaÃ±a-->
+        <title>Registro GasValid</title>                                       <!--Titulo a pestañaa-->
+        <link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg">           <!--Icono a pestaña-->
         <link rel="stylesheet" type="text/css" href="css/registro.css">        <!--estilo del login css-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="libraries/bootstrap4/bootstrap.min.css"> <!--libreria Para el cel-->
@@ -131,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
       <div class="form-group <?php echo (!empty($noEstacion_err)) ? 'has-error' : ''; ?>">
-      <input type="text" id="login" class="fadeIn noestacion" name="noEstacion" placeholder="No. de estacion" value="<?php echo $noEstacion; ?>"> <br> 
+      <input type="text" id="login" class="fadeIn noestacion" name="noEstacion" placeholder="No. de estacion" pattern="[0-9]+" value="<?php echo $noEstacion; ?>"> <br> 
       <span class="help-block"><?php echo $noEstacion_err; ?></span>  
       </div>  <!--input usuario-->
 
