@@ -1,6 +1,10 @@
 <?php
-
-
+//validemos que el usuario ya inicio sesion
+session_start();
+if($_SESSION["loggedin"] == false){
+  header("location: login.php");
+  exit;
+}
 //Deshabilitar informe de error para superglobales indefinidos
 error_reporting( error_reporting() & ~E_NOTICE );
 
@@ -13,23 +17,6 @@ $allow_show_folders = true; // Ponlo en falso para ocultar todos los subdirector
 
 $disallowed_extensions = ['php'];  
 $hidden_extensions = ['php']; 
-
-$PASSWORD = '';  // Acá puedes poner la contraseña para acceder al administrador de archivos ... (opcional)
-
-if($PASSWORD) {
-
-    session_start();
-    if(!$_SESSION['_sfm_allowed']) {
-        
-        $t = bin2hex(openssl_random_pseudo_bytes(10));
-        if($_POST['p'] && sha1($t.$_POST['p']) === sha1($t.$PASSWORD)) {
-            $_SESSION['_sfm_allowed'] = true;
-            header('Location: ?');
-        }
-        echo '<html><body><form action=? method=post>PASSWORD:<input type=password name=p autofocus/></form></body></html>';
-        exit;
-    }
-}
 
 // Debe estar en UTF-8
 setlocale(LC_ALL,'en_US.UTF-8');

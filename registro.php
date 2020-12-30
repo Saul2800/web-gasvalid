@@ -1,5 +1,10 @@
 
 <?php
+session_start();
+if($_SESSION["loggedin"] == false){
+  header("location: login.php");
+  exit;
+}
 // Include config file
 require_once "databaseconfig.php";
  
@@ -49,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["password"]))){
         $password_err = "Por favor ingresa una contraseña.";     
     } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "La contraseña al menos debe tener 6 caracteres.";
+        $password_err = "El password al menos debe tener 6 caracteres.";
     } else{
         $password = trim($_POST["password"]);
     }
