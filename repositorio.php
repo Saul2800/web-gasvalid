@@ -9,11 +9,24 @@ if($_SESSION["loggedin"] == false){
 error_reporting( error_reporting() & ~E_NOTICE );
 
 //Opciones de Seguridad
+//admin
+if($_SESSION["tipo"]==1){
 $allow_delete = true; // Ponlo en Falso para deshabilitar la opción de Eliminar
 $allow_upload = true; // Ponlo en verdad para permitir subir archivos
 $allow_create_folder = true; // En falso deshabilitas la opción de crear carpetas
 $allow_direct_link = true; // Ponlo en falso para permitir solo descargas y no enlaces directos
 $allow_show_folders = true; // Ponlo en falso para ocultar todos los subdirectorios
+$allow_registro=true;
+}
+//cliente
+else{
+$allow_delete = false; // Ponlo en Falso para deshabilitar la opción de Eliminar
+$allow_upload = false; // Ponlo en verdad para permitir subir archivos
+$allow_create_folder = false; // En falso deshabilitas la opción de crear carpetas
+$allow_direct_link = true; // Ponlo en falso para permitir solo descargas y no enlaces directos
+$allow_show_folders = true; // Ponlo en falso para ocultar todos los subdirectorios}
+$allow_registro= false;
+}
 
 $disallowed_extensions = ['php'];  
 $hidden_extensions = ['php']; 
@@ -416,7 +429,10 @@ $(function(){
 
 </br></br>
 <a href="logout.php" class="btn btn-danger pull-right">Cierra la sesión</a>
+<?php if($allow_registro): ?>
 <a href="registro.php" class="btn btn-danger pull-right">Registrar usuarios</a>
+<?php endif; ?>
+
 
 </body>
 </html>

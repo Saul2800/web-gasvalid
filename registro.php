@@ -1,10 +1,17 @@
 
 <?php
 session_start();
+//si no a ingresado al sistema lo saca
 if($_SESSION["loggedin"] == false){
   header("location: login.php");
   exit;
 }
+//si no es admin lo saca
+if($_SESSION["tipo"]==0){
+  header("location: repositorio.php");
+  exit;
+}
+
 // Include config file
 require_once "databaseconfig.php";
  

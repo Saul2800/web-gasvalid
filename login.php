@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if noEstacion exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $tipo, $noEstacion, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $noEstacion, $tipo, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -59,8 +59,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["tipo"] = $tipo;
                             $_SESSION["noEstacion"] = $noEstacion;
+                            $_SESSION["tipo"] = $tipo;
 
                             // Redirect user to welcome page
                             header("location: repositorio.php");
