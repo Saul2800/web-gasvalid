@@ -65,7 +65,9 @@ label { display:block;
 #upload_progress > div { 
     padding:3px 0;
         }
-.no_write #mkdir, .no_write #file_drop_target {display: none}
+.no_write #mkdir, .no_write #file_drop_target {
+    display: all;
+}
 
 
 .progress_track {

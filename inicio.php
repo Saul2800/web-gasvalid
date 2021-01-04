@@ -14,7 +14,7 @@
 				<div class="inner">
 					<nav id="nav">
 						<a href="login.php">Login</a>
-						<img src="recursos/gasvalid_logo.jpeg" width="100">							<!--Dirige al login-->
+						<img src="recursos/gasvalid_logo.jpeg" width="80">							<!--Dirige al login-->
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
@@ -53,7 +53,7 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="recursos/imagen1.jpg" alt="Pic 01" />		<!--imagen-->
+								<img width="200" src="recursos/gasvalid1.jpeg" alt="Pic 01" />		<!--imagen-->
 							</div>
 							<header>
 								<h3>TITULO4</h3>									<!--info-->
@@ -62,7 +62,7 @@
 						</article>
 						<article>
 							<div class="image round">		
-								<img src="recursos/imagen2.jpg" alt="Pic 02" />
+								<img width="200" src="recursos/gasvalid2.jpeg" alt="Pic 02" />
 							</div>
 							<header>	
 								<h3>TITULO5</h3>									<!--info-->
