@@ -188,6 +188,8 @@ $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('uploa
 
 <!DOCTYPE html>
 <html><head>
+ <title>GasValid repositorio</title>
+<link rel="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg"> 
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>
@@ -366,7 +368,7 @@ $(function(){
     }
     function renderBreadcrumbs(path) {
         var base = "",
-            $html = $('<div/>').append( $('<a href=#>Manejador de Archivos</a></div>') );
+            $html = $('<div/>').append( $('<a href =# style="font-size: 20px;">Manejador de Archivos</a></div>') );
         $.each(path.split('%2F'),function(k,v){
             if(v) {
                 var v_as_text = decodeURIComponent(v);
@@ -394,8 +396,18 @@ $(function(){
 
 </script>
  <link rel="stylesheet" type="text/css" href="css/repositorio.css">        <!--estilo del login css-->
+
 </head>
 <body>
+    <header id="header">
+                <div class="inner">
+                    <nav id="nav">
+                        <h1>Bienvenido al Repositorio</h1>
+                        <img src="recursos/gasvalid_logo.jpeg" width="200">                          <!--Dirige al login-->
+                    </nav>
+                    <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+                </div>
+            </header>
 <div id="top">
    <?php if($allow_create_folder): ?>
     <form action="?" method="post" id="mkdir" />
@@ -428,9 +440,9 @@ $(function(){
 </tbody></table>
 
 </br></br>
-<a href="logout.php" class="btn btn-danger pull-right">Cierra la sesión</a>
+<a href="logout.php" class="fadein" style="float: right;width: auto;">Cierra la sesión</a>
 <?php if($allow_registro): ?>
-<a href="registro.php" class="btn btn-danger pull-right">Registrar usuarios</a>
+<a href="registro.php" class="fadein">Registrar usuarios</a>
 <?php endif; ?>
 
 
