@@ -402,8 +402,7 @@ $(function(){
     <header id="header">
                 <div class="inner">
                     <nav id="nav">
-                        <h1>Bienvenido al Repositorio</h1>
-                        <img src="recursos/gasvalid_logo.jpeg" width="200">                          <!--Dirige al login-->
+                        <h1 id="bienvenida">Bienvenido al Repositorio</h1>
                     </nav>
                     <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
                 </div>
@@ -421,7 +420,7 @@ $(function(){
 
     <div id="file_drop_target">
         Arrastre los archivos aquí para cargar
-        <b>or</b>
+        <b>o</b>
         <input type="file" multiple />
     </div>
    <?php endif; ?>
@@ -440,7 +439,7 @@ $(function(){
 </tbody></table>
 
 </br></br>
-<a href="logout.php" class="fadein" style="float: right;width: auto;">Cierra la sesión</a>
+<a href="logout.php" class="fadein" id="logout" style="float: right;width: auto;">Cerrar sesión</a>
 <?php if($allow_registro): ?>
 <a href="registro.php" class="fadein">Registrar usuarios</a>
 <?php endif; ?>
