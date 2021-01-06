@@ -1,3 +1,15 @@
+<?php
+//insertar aqui el correo
+$destino= "algo@algo.com";
+$asunto="gasvalid";
+$correo =$_POST['email'];
+$mensaje=$_POST['mensaje'];
+$contenido= "Asunto: " . $asunto . "\nCorreo" . $correo . "\nMensaje" . $mensaje;
+$mail=@mail($destino,"Cotizacion",$contenido);
+if($mail)
+         header("location: inicio.php");
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -82,11 +94,11 @@
 					<form action="#" method="post">
 						<div class="field half">
 							<h4 id="email">Email</h4>
-							<input name="email" id="email" type="email" placeholder="Email"><!--INPUT-->
+							<input type="text" id="email" class="fadeIn email" name="email" placeholder="example@algo.com" required><!--INPUT-->
 						</div>	
 						<div class="field">
 							<h4 id="message">Mensaje</h4>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea> <!--texarea-->
+							<textarea id="mensaje" class="fadeIn mensaje" name="mensaje" placeholder="Mensaje" required></textarea> <!--texarea-->
 						</div>
 						<ul class="actions">
 							<li><input value="Send Message" class="button alt" type="submit"></li>	<!--SUMBIT-->
