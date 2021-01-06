@@ -11,7 +11,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tblUsuarios` (
-  `noEstacion` int(11) NOT NULL,
+  `noEstacion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
    `tipo`      int(11) NOT NULL,
   `email` 	   varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `password`   varchar(255) COLLATE utf8_spanish_ci NOT NULL,
@@ -23,8 +23,10 @@ CREATE TABLE `tblUsuarios` (
 --
 
 INSERT INTO `tblUsuarios` (`noEstacion`, `tipo`, `email`, `password`, `referencia`) VALUES
-(123, 1, '123@gas.com', 'gasvalid123', 'prueba');
+('123a', 1, '123@gas.com', '$2y$10$H0.c3sRBHIsTaqeNyxc9p.OehhhaH1WP3dDn9wnY7qP4LIEd.ogSS', 'admin');
 
+
+/*Login: 123a   gasvalid123*/
 --
 -- Indices de la tabla `tblUsuarios`
 --

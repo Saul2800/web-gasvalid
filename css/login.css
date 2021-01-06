@@ -293,3 +293,11 @@ h1{
 #icon {
   width:30%;
 }
+
+#btnpassword{
+  background-image:url(../recursos/eye.png);
+  height:16px; 
+  width:16px;
+  background-color: #edcfa9;
+}
+

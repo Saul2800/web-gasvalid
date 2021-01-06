@@ -113,7 +113,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $noEstacion_err; ?></span>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <input placeholder="Password" type="password" name="password" class="fadeIn third">
+                <input id="password" placeholder="Password" type="password" name="password" class="fadeIn third">
+                <button id="btnpassword" type="button" onclick="mostrarpassword()"></button><br>
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
@@ -125,6 +126,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <a class="underlineHover" href="inicio.php">INICIO</a>        <!--Hacemos un vinculo para hacer el registro-->
     </div>
   </div>
-</div>                     
+</div>
+<script>
+            function mostrarpassword(){
+                var tipo = document.getElementById("password");
+                if(tipo.type == "password"){
+                    tipo.type = "text";
+                }else{
+                    tipo.type = "password";
+                }
+            }
+        </script>
+
     </body>
 </html>

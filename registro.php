@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "iisss", $param_noEstacion, $param_tipo, $param_email, $param_password,  $param_referencia);    //int, int, string, string, string
+            mysqli_stmt_bind_param($stmt, "sisss", $param_noEstacion, $param_tipo, $param_email, $param_password,  $param_referencia);    //int, int, string, string, string
             
             // Set parameters
             $param_noEstacion = $noEstacion;
@@ -151,12 +151,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
       <div class="form-group <?php echo (!empty($noEstacion_err)) ? 'has-error' : ''; ?>">
-      <input type="text" id="login" class="fadeIn noestacion" name="noEstacion" placeholder="No. de estacion" pattern="[0-9]+" value="<?php echo $noEstacion; ?>"> <br> 
+      <input type="text" id="login" class="fadeIn noestacion" name="noEstacion" placeholder="No. de estacion"  value="<?php echo $noEstacion; ?>"> <br> 
       <span class="help-block"><?php echo $noEstacion_err; ?></span>  
       </div>  <!--input usuario-->
 
       <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-      <input type="password" id="password" class="fadeIn password" name="password" placeholder="password" value="<?php echo $password; ?>"> <br>
+      <input type="password" id="password" class="fadeIn password" name="password" placeholder="password" value="<?php echo $password; ?>">
+      <br><button id="btnpassword" type="button" onclick="mostrarpassword()"></button><br>
       <span class="help-block"><?php echo $password_err; ?></span>
       </div><!--input password-->
 
@@ -182,6 +183,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <a class="underlineHover" href="repositorio.php">REPOSITORIO</a>        <!--Hacemos un vinculo para hacer el registro-->
     </div>
   </div>
-</div>                     
+</div>     
+
+<script>
+            function mostrarpassword(){
+                var tipo = document.getElementById("password");
+                if(tipo.type == "password"){
+                    tipo.type = "text";
+                }else{
+                    tipo.type = "password";
+                }
+            }
+        </script>                
     </body>
 </html>
