@@ -61,9 +61,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["noEstacion"] = $noEstacion;
                             $_SESSION["tipo"] = $tipo;
-
+                            if($tipo==1){
                             // Redirect user to welcome page
-                            header("location: repositorio.php");
+                                header("location: repositorio.php");
+                            }
+                            else{
+                                header("location: repositorioUsuarios.php");
+                            }
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "La contraseña que has ingresado no es válida.";

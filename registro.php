@@ -109,6 +109,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
+               //$micarpeta = '/ruta/miserver/public_html'. '/' .$param_noEstacion;
+               /*Crea la carpeta JLCI 07/01/2021*/
+               $micarpeta = 'usuarios'. '/' .$param_noEstacion;
+               if (!file_exists($micarpeta)) {
+                $dir = mkdir($micarpeta, 0777, true);
+               }
+               //echo $dir;
+               //echo $micarpeta;
                echo '<script language="javascript">
                     alert("Usuario Registrado Correctamente");
                     window.location.href="registro.php";

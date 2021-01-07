@@ -34,10 +34,16 @@ $hidden_extensions = ['php'];
 // Debe estar en UTF-8
 setlocale(LC_ALL,'en_US.UTF-8');
 
-$tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
-if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
-$tmp = get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
-
+if($_SESSION["tipo"]==1){
+    $tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
+    if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
+    $tmp = get_absolute_path($tmp_dir . '/' .$_REQUEST['file']);
+}
+else{
+    $tmp_dir = dirname($_SERVER['SCRIPT_FILENAME']);
+    if(DIRECTORY_SEPARATOR==='\\') $tmp_dir = str_replace('/',DIRECTORY_SEPARATOR,$tmp_dir);
+    $tmp = get_absolute_path($tmp_dir . '/' ."usuarios".'/'.$noEstacion);
+}
 if($tmp === false)
     err(404,'Archivo o Carpeta no Encontrada');
 if(substr($tmp, 0,strlen($tmp_dir)) !== $tmp_dir)
