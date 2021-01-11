@@ -447,7 +447,8 @@ $(function(){
 </br></br>
 <a href="logout.php" class="fadein" id="logout" style="float: right;width: auto;">Cerrar sesión</a>
 <?php if($allow_registro): ?>
-<a href="registro.php" class="fadein">Registrar usuarios</a>
+<a href="registro.php" class="fadein">Registrar </a>
+<a href="eliminar.php" class="fadein">Eliminar </a>
 <?php endif; ?>
 
 
