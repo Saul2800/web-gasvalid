@@ -7,7 +7,7 @@ $mensaje=$_POST['mensaje'];
 $contenido= "Asunto: " . $asunto . "\nCorreo" . $correo . "\nMensaje" . $mensaje;
 $mail=@mail($destino,"Cotizacion",$contenido);
 if($mail)
-         header("location: inicio.php");
+         header("location: index.php");
 ?>
 
 <!DOCTYPE HTML>
@@ -17,7 +17,7 @@ if($mail)
 		<meta charset="utf-8" />
 		<link rel ="icon" type="icon/png" href="recursos/gasvalid_logo.jpeg" >      <!--Icono a pestaña-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />	<!--Para cels -->
-		<link rel="stylesheet" href="css/inicio.css" />							<!--css inicio -->	
+		<link rel="stylesheet" href="css/index.css" />							<!--css inicio -->	
 	</head>
 	<body>
 

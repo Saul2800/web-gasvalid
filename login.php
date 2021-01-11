@@ -127,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
 <!--Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="inicio.php">INICIO</a>        <!--Hacemos un vinculo para hacer el registro-->
+      <a class="underlineHover" href="index.php">INICIO</a>        <!--Hacemos un vinculo para hacer el registro-->
     </div>
   </div>
 </div>
