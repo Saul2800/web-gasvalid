@@ -18,6 +18,23 @@ require_once "databaseconfig.php";
 // Define variables and initialize with empty values
 $noEstacion = $noEstacion2 = "";
 $noEstacion_err = $noEstacion2_err = "";
+
+/*Elimina todos los directorios para el proceso recursivo ocasiona que mueran todos
+Jose Luis Caamal Ic
+11/01/2020*/
+function deleteDirectory($dir) {
+    if(!$dh = @opendir($dir)) return;
+    while (false !== ($current = readdir($dh))) {
+        if($current != '.' && $current != '..') {
+            echo 'Se ha borrado el archivo '.$dir.'/'.$current.'<br/>';
+            if (!@unlink($dir.'/'.$current)) 
+                deleteDirectory($dir.'/'.$current);
+        }       
+    }
+    closedir($dh);
+    echo 'Se ha borrado el directorio '.$dir.'<br/>';
+    @rmdir($dir);
+}
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -78,7 +95,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Set parameters
             $param_noEstacion = trim($_POST["noEstacion"]);
-            
+            $micarpeta = 'usuarios'. '/' .$param_noEstacion;
+            echo $micarpeta;
+            deleteDirectory($micarpeta);
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
