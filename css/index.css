@@ -1,3 +1,161 @@
+	.content {
+		text-align: center;
+	}
+/*Contenido de galeria ----------------------------------------*/
+
+	h1{
+		color:#fff;
+		text-align: center;
+	}
+/*animaciones */
+
+.galeriaTitulo h2{
+font-size: 64px;
+text-align: left;
+margin: 0 150px;
+}
+
+.galeriaTexto p{
+font-family: HaasGrotDisp,sans-serif;
+font-size: 32px;
+line-height: 1.25;
+padding: 0 150px;
+}
+
+.transicion{
+	transition: opacity .5s;
+}
+/* Ventana de diapositivas */
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+img{
+	width: 100%
+	height:100%;
+}
+
+.contenedor img{
+		width: 700px;
+	 	height: 90%;
+	 	max-width:100%;
+	 	border:7px solid #fff;
+	 	box-sizing: border-box;
+}
+.contenedor{
+	position: relative;
+	display: none;
+}
+.contenedor:target{
+
+	 	visibility: visible;
+	 	opacity: 1;
+	 	transition: all 1s;
+	 	display: block;
+	 	position: fixed;
+	 	background: rgba(0,0,0,0.8);
+	 	top:0;
+	 	left:0;
+	 	width: 100%;
+	 	height: 100%;
+	 	text-align: center;
+}
+.contenedorImagen{
+	padding-top: 40px;
+}
+.botones{
+	font-size:30px;
+	width:70px;
+	height:70px;
+	line-height: 70px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	color:#fff;
+	box-shadow: 0 0 10px rgba (255,255,255,.6);
+	-webkit-transition:all .3s ease;
+	-o-transition:all .3s ease;
+	transition:all .3s ease;
+
+}
+.botones:hover{
+	cursor:pointer;
+	transform:scale(1.2,1.2);
+}
+.atras{
+	left:2%;
+	top:calc(50% - 70px);
+}
+.cerrar{
+		right: 2%;
+		top: calc(10% - 70px);
+}
+.adelante{
+	right:2%;
+	top:calc(50% - 70px);
+}
+ /*Estilos de la galeria*/ 
+
+	.galeria{
+		width: 90%;
+		margin: auto;
+		list-style: none;
+		padding:100px;
+		box-sizing: border-box;
+	
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.galeria img{
+		width:300px;
+		height: 400px;
+		border-radius: 13px;
+
+	}
+	.galeria li{
+		margin:5px;
+	}
+
+	/*Contenido de Quienes somos ----------------------------------------*/
+
+	.about{
+		grid-template-columns: repeat(24,minmax(0,1fr));
+		margin: 0 112px;
+		display: grid;
+		padding: 54px;
+	}
+	.contenedorTexto{
+		grid-column-start: 1;
+		grid-column-end: span 12;
+	}
+	.contenedorTexto h2{
+		font-size: 64px;
+	}
+	.contenidoTexto{
+		font-family: HaasGrotDisp,sans-serif;
+		font-size: 32px;
+		line-height: 1.25;
+	}
+	.gridColumna{
+		grid-column-start: 15;
+		grid-column-end: span 10;
+	}
+	.contenidoImagen{
+		height: 70%;
+		width: 70%;
+		padding: 10 0px;
+		left: 20%;
+		position: relative;
+		top: 10%;
+	}
+
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -1622,8 +1780,8 @@
 		}
 
 	a {
-		color: #6cc091;
-		text-decoration: underline;
+		color: #000;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -2967,6 +3125,7 @@
 			justify-content: center;
 			text-align: center;
 			margin: 0 auto 4em auto;
+			display: ruby;
 		}
 
 			#banner .flex div {
