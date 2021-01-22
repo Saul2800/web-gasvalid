@@ -41,51 +41,183 @@ if($mail)
 
 					<div class="flex ">
 
-						<div>
-							<h3>TITULO1</h3>								<!--info-->
-							<p>parrafo1</p>									<!--info-->
-						</div>
+						<a href="#REF1" title="A Quienes somos">
+							<input value="Quienes Somos" class="REf1" type="submit">								<!--info-->
+						</a>
 
-						<div>
-							<h3>TITULO2</h3>								<!--info-->
-							<p>parrafo2</p>									<!--info-->
-						</div>
-						<div>
-							<h3>TITULO3</h3>								<!--info-->
-							<p>parrafo3</p>									<!--info-->
-						</div>
+						<a href="#REF2" title="A Contacto">
+							<input value="Contacto" class="REf2" type="submit">								<!--info-->
+						</a>
+						<a href="#REF3" title="A GAleria">
+							<input value="Galeria" class="REf3" type="submit">								<!--info-->
+						</a>
 					</div>
 				</div>
 			</section>
-
-
-		<!-- Three -->
-			<section id="three" class="wrapper align-center">
-				<div class="inner">
-					<div class="flex flex-2">
-						<article>
-							<div class="image round">
-								<img width="200" src="recursos/gasvalid1.jpeg" alt="Pic 01" />		<!--imagen-->
-							</div>
-							<header>
-								<h3>TITULO4</h3>									<!--info-->
-							</header>
-							<p>parrafo4</p>											<!--info-->
-						</article>
-						<article>
-							<div class="image round">		
-								<img width="200" src="recursos/gasvalid2.jpeg" alt="Pic 02" />
-							</div>
-							<header>	
-								<h3>TITULO5</h3>									<!--info-->
-							</header>
-							<p>parrafo5</p>											<!--info-->
-						</article>
+	<section id="pantalla">
+		<a name="REF1">
+			<div class="about">
+				<div class="contenedorTexto">
+					<h2 class="tituloTexto">
+						Con nosotros, seguridad y confianza. 
+					</h2>
+					<div class="contenidoTexto">
+						<p align="justify" >
+							Rake at the moon where the river flows Cut from the cloth of the winter's cold
+							Bound by the voice that no one hears I've been around the way for years
+							Stray from the heart the more that you know All gussied up with no place to go
+							Table side the one of your dreams Get what you want and not what you need
+							Parlor games and six o'clock news Hands of a stranger touching you
+							Wide awake incased in a dream Everything is not as it seems
+							All your time is heaven sent Days and the nights all start to blend
+							It's not like this town to set you free The more you look the less you see
+						</p>
 					</div>
 				</div>
-			</section>
+				<div class="gridColumna">
+						<img src="recursos/imagenAbout.jpeg" alt="imagen seleccionada" class="contenidoImagen">
+					</div>
+			</div>
+		</a>
 
-		<!-- Footer -->
+			<!-- Three -->
+			<a name="REF3">
+
+		<section id="quienes_somos" class="galeriaTitulo">
+			<header>
+				<h2>Galeria</h2>
+			</header>
+
+			<div class="galeriaTexto">
+				
+				<p align="justify" >Conoce nuestro trabajo</p>
+			</div>
+		</section>
+
+				<div class="content">
+					<ul class="galeria">
+							<li><a href="#img1"><img src="recursos/1.jpeg" ></a></li>
+							<li><a href="#img2"><img src="recursos/2.jpeg" ></a></li>
+							<li><a href="#img3"><img src="recursos/3.jpeg" ></a></li>
+							<li><a href="#img4"><img src="recursos/4.jpeg" ></a></li>
+							<li><a href="#img5"><img src="recursos/5.jpeg" ></a></li>
+							<li><a href="#img6"><img src="recursos/6.jpeg" ></a></li>
+							<li><a href="#img7"><img src="recursos/7.jpeg" ></a></li>
+							<li><a href="#img8"><img src="recursos/8.jpeg" ></a></li>
+					</ul>
+				</div>
+
+								
+				<!--  IMAGEN 1 -->
+							<div class="contenedor " id="img1">
+								<div href="#img8" class="atras botones" href="#img8">
+									&#60
+								</div>
+								<div href="#img2" class="adelante botones" href="#img2">
+									&#62
+								</div>
+									<div class="contenedorImagen">
+								<img src="recursos/1.jpeg" alt="" id="imagen">
+							</div>
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+
+				<!--  IMAGEN 2-->
+							<div class="contenedor" id="img2">
+								<div class="atras botones" href="#img1">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img3">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/2.jpeg" alt="" id="imagen">
+							</div>
+								<a href="#REF3" class="cerrar botones">X</a>
+
+							</div>
+
+				<!-- IMAGEN 3  -->
+							<div class="contenedor" id="img3">
+								<div class="atras botones" href="#img2">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img4">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/1.jpeg" alt="" id="imagen"></div>
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+
+				<!-- IMAGEN 4 -->
+							<div class="contenedor" id="img4">
+								<div class="atras botones" href="#img3">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img5">
+									&#62
+								</div>
+								<img src="recursos/4.jpeg" alt="" id="imagen">
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+							
+				<!--IMAGEN 5 -->
+							<div class="contenedor" id="img5">
+								<div class="atras botones" href="#img4">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img6">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/5.jpeg" alt="" id="imagen"></div>
+							<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+
+				<!--IMAGEN 6 -->
+							<div class="contenedor" id="img6">
+								<div class="atras botones" href="#img5">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img7">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/6.jpeg" alt="" id="imagen"></div>
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+
+				<!--IMAGEN 7 -->
+							<div class="contenedor" id="img7">
+								<div class="atras botones" href="#img6">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img8">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/7.jpeg" alt="" id="imagen"></div>
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+
+				<!--IMAGEN 8 -->
+							<div class="contenedor" id="img8">
+								<div class="atras botones" href="#img7">
+									&#60
+								</div>
+								<div class="adelante botones" href="#img1">
+									&#62
+								</div>
+								<div class="contenedorImagen">
+								<img src="recursos/8.jpeg" alt="" id="imagen"></div>
+								<a href="#REF3" class="cerrar botones">X</a>
+							</div>
+							</a>
+	</section>
+			<!-- Footer -->
+	</div>
+		<a name="REF2">
 			<footer id="footer">
 				<div class="inner">
 
@@ -111,7 +243,7 @@ if($mail)
 
 				</div>
 			</footer>
-
+</a>
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/skel.min.js"></script>
