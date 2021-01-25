@@ -54,32 +54,28 @@ if($mail)
 					</div>
 				</div>
 			</section>
-	<section id="pantalla">
+	<section id="pantalla" class="pantalla">
 		<a name="REF1">
 			<div class="about">
-				<div class="contenedorTexto">
+				<div class="gridColumna">
+						<img src="recursos/imagenAbout.jpeg" alt="imagen seleccionada" class="contenidoImagen">
+					</div>
+					<div class="contenedorTexto formato">
 					<h2 class="tituloTexto">
 						Con nosotros, seguridad y confianza. 
 					</h2>
-					<div class="contenidoTexto">
+					<div class="contenidoTexto formato">
 						<p align="justify" >
 							Rake at the moon where the river flows Cut from the cloth of the winter's cold
 							Bound by the voice that no one hears I've been around the way for years
 							Stray from the heart the more that you know All gussied up with no place to go
-							Table side the one of your dreams Get what you want and not what you need
-							Parlor games and six o'clock news Hands of a stranger touching you
-							Wide awake incased in a dream Everything is not as it seems
-							All your time is heaven sent Days and the nights all start to blend
-							It's not like this town to set you free The more you look the less you see
+							
 						</p>
 					</div>
 				</div>
-				<div class="gridColumna">
-						<img src="recursos/imagenAbout.jpeg" alt="imagen seleccionada" class="contenidoImagen">
-					</div>
 			</div>
-		</a>
 
+		</a>
 			<!-- Three -->
 			<a name="REF3">
 
@@ -96,122 +92,76 @@ if($mail)
 
 				<div class="content">
 					<ul class="galeria">
-							<li><a href="#img1"><img src="recursos/1.jpeg" ></a></li>
-							<li><a href="#img2"><img src="recursos/2.jpeg" ></a></li>
-							<li><a href="#img3"><img src="recursos/3.jpeg" ></a></li>
-							<li><a href="#img4"><img src="recursos/4.jpeg" ></a></li>
-							<li><a href="#img5"><img src="recursos/5.jpeg" ></a></li>
-							<li><a href="#img6"><img src="recursos/6.jpeg" ></a></li>
-							<li><a href="#img7"><img src="recursos/7.jpeg" ></a></li>
-							<li><a href="#img8"><img src="recursos/8.jpeg" ></a></li>
+							<li><a id="im1" href="#img1"><img src="recursos/1.jpeg" ></a></li>
+							<li><a id="im2" href="#img2"><img src="recursos/2.jpeg" ></a></li>
+							<li><a id="im3" href="#img3"><img src="recursos/3.jpeg" ></a></li>
+							<li><a id="im4" href="#img4"><img src="recursos/4.jpeg" ></a></li>
+							<li><a id="im5" href="#img5"><img src="recursos/5.jpeg" ></a></li>
+							<li><a id="im6" href="#img6"><img src="recursos/6.jpeg" ></a></li>
+							<li><a id="im7" href="#img7"><img src="recursos/7.jpeg" ></a></li>
+							<li><a id="im8" href="#img8"><img src="recursos/8.jpeg" ></a></li>
 					</ul>
 				</div>
 
 								
 				<!--  IMAGEN 1 -->
-							<div class="contenedor " id="img1">
-								<div href="#img8" class="atras botones" href="#img8">
-									&#60
-								</div>
-								<div href="#img2" class="adelante botones" href="#img2">
-									&#62
-								</div>
+							<div class="contenedor" id="img1">
+								
 									<div class="contenedorImagen">
 								<img src="recursos/1.jpeg" alt="" id="imagen">
 							</div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im1" class="cerrar botones">X</a>
 							</div>
 
 				<!--  IMAGEN 2-->
 							<div class="contenedor" id="img2">
-								<div class="atras botones" href="#img1">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img3">
-									&#62
-								</div>
+								
 								<div class="contenedorImagen">
 								<img src="recursos/2.jpeg" alt="" id="imagen">
 							</div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im2" class="cerrar botones">X</a>
 
 							</div>
 
 				<!-- IMAGEN 3  -->
 							<div class="contenedor" id="img3">
-								<div class="atras botones" href="#img2">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img4">
-									&#62
-								</div>
 								<div class="contenedorImagen">
 								<img src="recursos/1.jpeg" alt="" id="imagen"></div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im3" class="cerrar botones">X</a>
 							</div>
 
 				<!-- IMAGEN 4 -->
 							<div class="contenedor" id="img4">
-								<div class="atras botones" href="#img3">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img5">
-									&#62
-								</div>
 								<img src="recursos/4.jpeg" alt="" id="imagen">
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im4" href="#REF3" class="cerrar botones">X</a>
 							</div>
 							
 				<!--IMAGEN 5 -->
 							<div class="contenedor" id="img5">
-								<div class="atras botones" href="#img4">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img6">
-									&#62
-								</div>
 								<div class="contenedorImagen">
 								<img src="recursos/5.jpeg" alt="" id="imagen"></div>
-							<a href="#REF3" class="cerrar botones">X</a>
+							<a  href="#im5" class="cerrar botones">X</a>
 							</div>
 
 				<!--IMAGEN 6 -->
 							<div class="contenedor" id="img6">
-								<div class="atras botones" href="#img5">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img7">
-									&#62
-								</div>
 								<div class="contenedorImagen">
 								<img src="recursos/6.jpeg" alt="" id="imagen"></div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im6" class="cerrar botones">X</a>
 							</div>
 
 				<!--IMAGEN 7 -->
 							<div class="contenedor" id="img7">
-								<div class="atras botones" href="#img6">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img8">
-									&#62
-								</div>
 								<div class="contenedorImagen">
 								<img src="recursos/7.jpeg" alt="" id="imagen"></div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im7" class="cerrar botones">X</a>
 							</div>
 
 				<!--IMAGEN 8 -->
 							<div class="contenedor" id="img8">
-								<div class="atras botones" href="#img7">
-									&#60
-								</div>
-								<div class="adelante botones" href="#img1">
-									&#62
-								</div>
 								<div class="contenedorImagen">
 								<img src="recursos/8.jpeg" alt="" id="imagen"></div>
-								<a href="#REF3" class="cerrar botones">X</a>
+								<a href="#im8" class="cerrar botones">X</a>
 							</div>
 							</a>
 	</section>
