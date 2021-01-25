@@ -1,6 +1,9 @@
 	.content {
 		text-align: center;
 	}
+	.pantalla{
+		background-color: 
+	}
 /*Contenido de galeria ----------------------------------------*/
 
 	h1{
@@ -11,15 +14,17 @@
 
 .galeriaTitulo h2{
 font-size: 64px;
-text-align: left;
-margin: 0 150px;
+text-align: center;
+margin: 0 auto;
+padding-top: 200px;
 }
 
 .galeriaTexto p{
 font-family: HaasGrotDisp,sans-serif;
 font-size: 32px;
 line-height: 1.25;
-padding: 0 150px;
+padding: 0;
+text-align: center
 }
 
 .transicion{
@@ -40,12 +45,13 @@ img{
 }
 
 .contenedor img{
-		width: 700px;
-	 	height: 90%;
-	 	max-width:100%;
-	 	border:7px solid #fff;
-	 	box-sizing: border-box;
-}
+		width: 80%;
+		height: 100%;
+		max-height: 700px;
+		border: 7px solid #fff;
+		box-sizing: border-box;
+		max-width: 500px;
+		}
 .contenedor{
 	position: relative;
 	display: none;
@@ -114,11 +120,11 @@ img{
 		justify-content: center;
 	}
 	.galeria img{
-		width:300px;
-		height: 400px;
+		width: 170px;
+		height: 250px;
 		border-radius: 13px;
-
 	}
+
 	.galeria li{
 		margin:5px;
 	}
@@ -127,33 +133,47 @@ img{
 
 	.about{
 		grid-template-columns: repeat(24,minmax(0,1fr));
-		margin: 0 112px;
-		display: grid;
-		padding: 54px;
+		margin: 0 auto;
+		display: flex;
+		padding: 0;
+		flex-wrap: wrap;
 	}
 	.contenedorTexto{
-		grid-column-start: 1;
-		grid-column-end: span 12;
-	}
+		margin: auto;
+		max-width: 50%;
+}
 	.contenedorTexto h2{
-		font-size: 64px;
+		font-size: 50px;
+		line-height: 1.2;
+		max-width: 80%;
 	}
+
 	.contenidoTexto{
 		font-family: HaasGrotDisp,sans-serif;
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 1.25;
+		max-width: 70%;
+		min-width: 250px;
+		padding-top: 10px;
 	}
 	.gridColumna{
-		grid-column-start: 15;
-		grid-column-end: span 10;
+		display: flex;
+		position: initial;
+		margin: 0 auto;
+		width: 50%;
+		height: 800px;
+		min-width: 350px;
 	}
 	.contenidoImagen{
-		height: 70%;
-		width: 70%;
-		padding: 10 0px;
-		left: 20%;
-		position: relative;
-		top: 10%;
+		height: 260px;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 2;
+		display: flex;
+		position: inherit;
+		max-width: 400px;
+
 	}
 
 
@@ -3236,6 +3256,7 @@ img{
 					-ms-flex-direction: column;
 					flex-direction: column;
 					margin: 0 auto 2em auto;
+					display: flex;
 				}
 
 					#banner .flex div {
