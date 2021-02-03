@@ -113,13 +113,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($noEstacion_err)) ? 'has-error' : ''; ?>">
-                <input placeholder="No. Estacion"type="text" name="noEstacion" class="fadeIn second" value="<?php echo $noEstacion; ?>">  
-                <span class="help-block"><?php echo $noEstacion_err; ?></span>
+                <input placeholder="No. Estacion"type="text" name="noEstacion" class="fadeIn second" value="<?php echo $noEstacion; ?>"><br>  
+                <span class="help-block"><?php echo $noEstacion_err; ?></span><br>
             </div>
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <input id="password" placeholder="Password" type="password" name="password" class="fadeIn third">
+                <input id="password" placeholder="Password" type="password" name="password" class="fadeIn third"><br>
                 <button id="btnpassword" type="button" onclick="mostrarpassword()"></button><br>
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <span class="help-block"><?php echo $password_err; ?></span><br>
             </div>
             <div class="form-group">
                 <input type="submit" class="fadeIn fourth" value="Entrar">

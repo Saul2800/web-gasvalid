@@ -24,10 +24,10 @@ if($mail)
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<nav id="nav">
+
 						<a href="login.php">Login</a>
 						<img src="recursos/gasvalid_logo.jpeg" width="80">							<!--Dirige al login-->
-					</nav>
+
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
